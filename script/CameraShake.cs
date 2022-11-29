@@ -35,7 +35,7 @@ public class CameraShake : MonoBehaviour
     private void SetNoise(float amplitudeGain, float frequencyGain)
     {
         var _camera = camera.GetComponentInChildren<CinemachineBasicMultiChannelPerlin>();
-        if (_camera)
+        if (_camera == null)
         {
             Debug.LogWarning("Cinemachine noise profile not found.", this);
         }
